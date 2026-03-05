@@ -1,0 +1,67 @@
+# ── RAG & Orchestration ──────────────────────────────────────────
+# LangChain : orchestration du pipeline RAG complet
+# (chargement PDF → découpage → embeddings → recherche → génération)
+langchain
+
+# Connecteurs communautaires : intègre Ollama, BM25, loaders PDF...
+langchain-community
+
+# Intégration officielle LangChain ↔ ChromaDB
+langchain-chroma
+
+# ── Base vectorielle ─────────────────────────────────────────────
+# ChromaDB : stocke les embeddings et permet la recherche par similarité
+# Les embeddings sont des représentations numériques du texte (vecteurs)
+chromadb
+
+# ── LLM Local ────────────────────────────────────────────────────
+# Client Python pour communiquer avec le serveur Ollama en local
+ollama
+
+# ── LLM Cloud ────────────────────────────────────────────────────
+# Client Groq : accès gratuit à LLaMA 3, Mixtral, Gemma via API
+# Aucun téléchargement — les modèles tournent sur les serveurs Groq
+groq
+
+# ── Traitement PDF ───────────────────────────────────────────────
+# pypdf : extrait le texte brut depuis les fichiers PDF uploadés
+pypdf
+
+# ── Reranking ────────────────────────────────────────────────────
+# sentence-transformers : cross-encoder qui re-classe les chunks
+# par ordre de pertinence réelle — améliore la qualité des réponses
+sentence-transformers
+
+# ── Hybrid Search ────────────────────────────────────────────────
+# BM25 : algorithme de recherche par mots-clés
+# Combiné à la recherche vectorielle pour un hybrid search robuste
+rank-bm25
+
+# ── Évaluation RAG ───────────────────────────────────────────────
+# RAGAS : calcule la fidélité, la pertinence et la précision des réponses
+ragas
+
+# ── Backend API ──────────────────────────────────────────────────
+# FastAPI : framework pour créer des APIs REST modernes et rapides
+# Génère automatiquement la doc interactive sur /docs
+fastapi
+
+# Uvicorn : serveur ASGI asynchrone qui fait tourner FastAPI
+uvicorn
+
+# Nécessaire pour recevoir des fichiers uploadés via HTTP (PDFs)
+python-multipart
+
+# WebSockets : communication temps réel entre backend et frontend
+# Utilisé pour envoyer le statut d'ingestion en direct
+websockets
+
+# ── Utilitaires ──────────────────────────────────────────────────
+# Charge les variables du fichier .env dans l'environnement Python
+python-dotenv
+
+# Validation et typage des données — utilisé par FastAPI
+pydantic
+
+# Logs structurés et lisibles, bien mieux que le module logging de base
+loguru

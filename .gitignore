@@ -1,0 +1,42 @@
+# ════════════════════════════════════════════════════════════════
+# SMARTDOCS — Fichiers exclus du versioning Git
+# ════════════════════════════════════════════════════════════════
+
+# ── Python ───────────────────────────────────────────────────────
+# Environnement virtuel (lourd, se recrée avec pip install)
+.venv/
+backend/.venv/
+# Cache Python généré automatiquement
+__pycache__/
+# Fichiers Python compilés
+*.pyc
+*.pyo
+# Secrets — NE JAMAIS pousser sur Git
+.env
+
+# ── Next.js ──────────────────────────────────────────────────────
+# Build Next.js (généré avec npm run build)
+frontend/.next/
+# Dépendances npm (lourd, se recrée avec npm install)
+node_modules/
+frontend/node_modules/
+# Variables d'env côté frontend
+frontend/.env.local
+
+# ── Données locales ──────────────────────────────────────────────
+# PDFs uploadés — données privées des utilisateurs
+backend/data/documents/
+# Base ChromaDB générée automatiquement
+backend/vectorstore/
+
+# ── Éditeurs ─────────────────────────────────────────────────────
+# Paramètres VS Code personnels
+.vscode/
+# Paramètres JetBrains
+.idea/
+
+# ── Système d'exploitation ───────────────────────────────────────
+# Fichier de metadata macOS
+.DS_Store
+# Fichier de thumbnails Windows
+Thumbs.db
