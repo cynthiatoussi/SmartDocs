@@ -65,3 +65,10 @@ pydantic
 
 # Logs structurés et lisibles, bien mieux que le module logging de base
 loguru
+
+# Extension Pydantic pour la gestion de la configuration via .env
+pydantic-settings
+
+# Modèles d'embeddings locaux — génère les vecteurs des chunks
+sentence-transformers
+

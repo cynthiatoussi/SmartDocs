@@ -40,3 +40,7 @@ backend/vectorstore/
 .DS_Store
 # Fichier de thumbnails Windows
 Thumbs.db
+
+# Logs générés automatiquement
+logs/
+*.log
